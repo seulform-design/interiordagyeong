@@ -1065,7 +1065,8 @@
 }
 
 /* ===== LICENSE & CLIENT ===== */
-.trust { background: var(--c-ivory); }
+.trust { background: var(--c-ivory); padding-top: var(--sp-7); padding-bottom: var(--sp-7); }
+.trust .s-head.center { margin-bottom: var(--sp-5); }
 .trust-licenses {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
