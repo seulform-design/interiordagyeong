@@ -1,0 +1,63 @@
+/* ===== Reset ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+img { -webkit-user-drag: none; user-select: none; }
+
+input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+    outline: none;
+    border: none;
+    background: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+button { cursor: pointer; }
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    word-break: keep-all;
+    font-weight: inherit;
+}
+
+ul, ol { list-style: none; }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+address { font-style: normal; }
+
+::selection { background: #1F1D1A; color: #FAF8F5; }

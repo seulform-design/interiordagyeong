@@ -1,0 +1,198 @@
+/* =========================================================
+   다경에스앤디 — Portfolio
+   ========================================================= */
+
+/* ===== Filter Bar ===== */
+.pf-bar {
+    border-bottom: 1px solid var(--c-line);
+    padding: var(--sp-4) 0;
+    position: sticky;
+    top: var(--h-header-sm);
+    z-index: 50;
+    backdrop-filter: saturate(140%) blur(14px);
+    -webkit-backdrop-filter: saturate(140%) blur(14px);
+    background: rgba(250, 248, 245, 0.98);
+}
+
+.pf-bar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-4);
+    flex-wrap: wrap;
+}
+
+.pf-filter {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-4);
+}
+
+.pf-filter-btn {
+    position: relative;
+    padding: 6px 0;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--c-olive);
+    transition: color var(--dur-1) var(--ease);
+}
+.pf-filter-btn sup {
+    margin-left: 4px;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    vertical-align: super;
+    color: var(--c-stone);
+}
+.pf-filter-btn::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 0; height: 1px;
+    background: var(--c-ink);
+    transition: width var(--dur-1) var(--ease);
+}
+.pf-filter-btn:hover { color: var(--c-ink); }
+.pf-filter-btn.active {
+    color: var(--c-ink);
+}
+.pf-filter-btn.active::after { width: 100%; }
+
+.pf-count {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: var(--ls-wider);
+    color: var(--c-olive);
+    text-transform: uppercase;
+}
+
+/* ===== Grid ===== */
+.pf-section {
+    padding: var(--sp-7) 0 var(--sp-9);
+    background: var(--c-bg);
+}
+
+.pf-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-5) var(--sp-4);
+}
+
+.pf-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+    cursor: pointer;
+    transition: opacity var(--dur-1) var(--ease),
+                transform var(--dur-1) var(--ease);
+}
+.pf-card:hover .pf-thumb::after { opacity: 1; }
+.pf-card:hover .pf-thumb-inner { transform: scale(1.04); }
+.pf-card.hide { display: none; }
+
+/* Thumb */
+.pf-thumb {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: var(--c-ivory);
+}
+.pf-thumb::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: center/cover no-repeat;
+    transition: transform 1.2s var(--ease-out);
+    z-index: 1;
+}
+.pf-thumb::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.35) 100%);
+    opacity: 0;
+    transition: opacity var(--dur-1) var(--ease);
+    z-index: 2;
+}
+.pf-card:hover .pf-thumb::before { transform: scale(1.04); }
+
+/* Hotel & Resort */
+.pf-t1::before { background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1100&q=80'); }
+.pf-t2::before { background-image: url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1100&q=80'); }
+.pf-t3::before { background-image: url('https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1100&q=80'); }
+.pf-t4::before { background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1100&q=80'); }
+/* Office */
+.pf-t5::before { background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1100&q=80'); }
+.pf-t6::before { background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1100&q=80'); }
+.pf-t7::before { background-image: url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1100&q=80'); }
+/* Public */
+.pf-t8::before { background-image: url('https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&w=1100&q=80'); }
+.pf-t9::before { background-image: url('https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1100&q=80'); }
+/* Commercial */
+.pf-t10::before { background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1100&q=80'); }
+.pf-t11::before { background-image: url('https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1100&q=80'); }
+/* Medical */
+.pf-t12::before { background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1100&q=80'); }
+
+/* Info */
+.pf-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0 4px;
+}
+.pf-num {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: var(--ls-wider);
+    color: var(--c-olive);
+    text-transform: uppercase;
+}
+.pf-info h3 {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--c-ink);
+    line-height: 1.25;
+}
+.pf-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 12px;
+    color: var(--c-olive);
+    letter-spacing: 0.02em;
+    margin-top: 2px;
+}
+.pf-scope {
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--c-stone);
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+    border-top: 1px solid var(--c-line);
+    padding-top: 8px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+    .pf-grid { grid-template-columns: repeat(2, 1fr); }
+    .pf-bar { position: static; }
+    .pf-bar-inner { gap: var(--sp-3); }
+    .pf-filter { flex-wrap: wrap; gap: var(--sp-3); }
+}
+
+@media (max-width: 768px) {
+    .pf-grid {
+        grid-template-columns: 1fr;
+        gap: var(--sp-5);
+    }
+    .pf-thumb { aspect-ratio: 5 / 4; }
+    .pf-count { display: none; }
+}
+
+@media (max-width: 480px) {
+    .pf-filter { gap: var(--sp-3); }
+    .pf-filter-btn { font-size: 12px; }
+}
