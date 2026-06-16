@@ -396,6 +396,8 @@
 /* 짝수: 이미지 좌 · 텍스트 우(좌측정렬) */
 .cv-item:nth-child(even) .cv-photo { grid-column: 1; justify-self: end; }
 .cv-item:nth-child(even) .cv-text { grid-column: 2; text-align: left; }
+/* 텍스트·이미지를 같은 행에 고정 (그리드 자동배치로 짝수 항목이 다음 행으로 밀리는 문제 방지) */
+.cv-item > .cv-text, .cv-item > .cv-photo { grid-row: 1; }
 
 .cv-photo {
     width: clamp(180px, 22vw, 240px);
@@ -1302,6 +1304,8 @@
     .cv-item:nth-child(even) .cv-text { grid-column: 1; text-align: left; order: 2; }
     .cv-item:nth-child(odd) .cv-photo,
     .cv-item:nth-child(even) .cv-photo { grid-column: 1; justify-self: start; order: 1; }
+    /* 모바일 단일 컬럼: 같은 행 고정 해제(세로 스택) */
+    .cv-item > .cv-text, .cv-item > .cv-photo { grid-row: auto; }
     .cv-node { left: 22px; top: 40px; }
     /* 서사형 섹션: 단일 컬럼 */
     .pp-inner, .hb-inner { grid-template-columns: 1fr; }
