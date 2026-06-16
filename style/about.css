@@ -59,15 +59,57 @@
     text-transform: uppercase;
 }
 
-/* ===== CEO Message ===== */
+/* ===== CEO Message (image-free) ===== */
 .ceo { background: var(--c-bg); }
-.ceo-image {
-    background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80');
+.ceo-msg {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: clamp(var(--sp-5), 6vw, var(--sp-8));
+    align-items: start;
 }
-.ceo-image::after { content: 'CEO · Kwon Gi Won'; }
+.ceo-head { position: relative; }
+.ceo-head .eyebrow { display: block; margin-bottom: var(--sp-3); }
+.ceo-statement {
+    font-family: var(--font-serif);
+    font-size: clamp(34px, 4vw, 56px);
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    color: var(--c-ink);
+}
+/* 큰 따옴표 장식 */
+.ceo-body {
+    position: relative;
+    padding-top: var(--sp-5);
+}
+.ceo-body::before {
+    content: '\201C';
+    position: absolute;
+    top: -0.35em; left: -0.06em;
+    font-family: var(--font-serif);
+    font-size: clamp(80px, 9vw, 140px);
+    line-height: 1;
+    color: var(--c-bronze);
+    opacity: 0.18;
+    pointer-events: none;
+}
+.ceo-body p {
+    position: relative;
+    font-size: clamp(15px, 1.4vw, 17px);
+    line-height: 1.9;
+    color: var(--c-ink-mid);
+    margin-bottom: var(--sp-3);
+}
+.ceo-lead {
+    font-size: clamp(18px, 1.8vw, 22px) !important;
+    font-weight: 500;
+    line-height: 1.6 !important;
+    color: var(--c-ink) !important;
+    margin-bottom: var(--sp-4) !important;
+}
 .ceo-sign {
-    margin-top: var(--sp-4);
-    padding-top: var(--sp-3);
+    margin-top: var(--sp-5);
+    padding-top: var(--sp-4);
     border-top: 1px solid var(--c-line);
     font-size: 14px;
     letter-spacing: 0.02em;
@@ -75,10 +117,14 @@
 }
 .ceo-sign strong {
     margin-left: 6px;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 600;
     letter-spacing: 0.06em;
     color: var(--c-ink);
+}
+@media (max-width: 768px) {
+    .ceo-msg { grid-template-columns: 1fr; gap: var(--sp-4); }
+    .ceo-body { padding-top: var(--sp-3); }
 }
 
 /* ===== History ===== */
