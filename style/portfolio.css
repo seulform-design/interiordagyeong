@@ -175,8 +175,89 @@
     padding-top: 8px;
 }
 
+/* ===== Featured Case Study ===== */
+.case { background: var(--c-ivory); border-top: 1px solid var(--c-line); }
+.case-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--sp-6);
+    align-items: start;
+}
+.case-ba {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-3);
+}
+.ba-item { position: relative; }
+.ba-img {
+    aspect-ratio: 4 / 3;
+    background: var(--c-stone) center/cover no-repeat;
+    overflow: hidden;
+}
+.ba-before { background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80'); filter: grayscale(0.5) brightness(0.9); }
+.ba-after  { background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1000&q=80'); }
+.ba-tag {
+    position: absolute;
+    top: 12px; left: 12px;
+    padding: 6px 12px;
+    background: rgba(11, 42, 71, 0.82);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: var(--ls-wider);
+    text-transform: uppercase;
+    border-radius: 999px;
+}
+.ba-tag.is-after { background: var(--c-bronze); }
+
+.case-meta { align-self: center; }
+.case-meta > div {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: var(--sp-3);
+    padding: var(--sp-3) 0;
+    border-bottom: 1px solid var(--c-line);
+}
+.case-meta dt {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: var(--ls-wider);
+    text-transform: uppercase;
+    color: var(--c-olive);
+}
+.case-meta dd {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--c-ink);
+}
+
+.case-results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-4);
+    margin-top: var(--sp-6);
+    border-top: 1px solid var(--c-line);
+    padding-top: var(--sp-5);
+}
+.case-results li { display: flex; flex-direction: column; gap: 8px; }
+.cr-num {
+    font-size: clamp(32px, 3.5vw, 48px);
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: var(--c-bronze);
+}
+.cr-num small { font-size: 0.4em; margin-left: 2px; color: var(--c-olive); }
+.case-results p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--c-ink-mid);
+}
+.case-cta { margin-top: var(--sp-6); }
+
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
+    .case-grid { grid-template-columns: 1fr; gap: var(--sp-5); }
     .pf-grid { grid-template-columns: repeat(2, 1fr); }
     .pf-bar { position: static; }
     .pf-bar-inner { gap: var(--sp-3); }
