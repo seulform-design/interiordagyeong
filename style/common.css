@@ -586,6 +586,15 @@ body {
     text-align: right;
     align-self: end;
 }
+.page-hero-aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--sp-4);
+    align-self: end;
+}
+.page-hero-aside p { text-align: right; }
+.page-hero-aside .btn { align-self: flex-end; }
 .page-hero .crumb {
     display: inline-flex;
     gap: 8px;
@@ -934,6 +943,9 @@ body {
         gap: var(--sp-3);
     }
     .page-hero p { text-align: left; }
+    .page-hero-aside { align-items: flex-start; }
+    .page-hero-aside p { text-align: left; }
+    .page-hero-aside .btn { align-self: stretch; }
     .s-head.row {
         flex-direction: column;
         align-items: flex-start;

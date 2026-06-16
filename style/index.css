@@ -1147,6 +1147,29 @@
 }
 .client-logos-wide li { font-size: clamp(15px, 1.5vw, 20px); }
 
+.client-cats {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-6);
+}
+.client-cat-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: var(--ls-wider);
+    text-transform: uppercase;
+    color: var(--c-bronze);
+    text-align: center;
+    margin-bottom: var(--sp-4);
+}
+.client-cat-label::after {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: var(--c-line);
+    margin: var(--sp-3) auto 0;
+}
+
 .s-head.center .center-lede {
     max-width: 60ch;
     margin: var(--sp-3) auto 0;
