@@ -685,6 +685,22 @@ body {
     align-items: flex-start;
     gap: var(--sp-3);
 }
+.cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-3);
+    margin-top: var(--sp-2);
+}
+.btn-ghost {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+}
+.btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #fff;
+    color: #fff;
+}
 .cta-strip p {
     color: var(--c-stone);
     font-size: var(--t-body);
