@@ -1170,6 +1170,16 @@
     margin: var(--sp-3) auto 0;
 }
 
+.client-cat-desc {
+    text-align: center;
+    max-width: 64ch;
+    margin: -6px auto var(--sp-4);
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--c-olive);
+    letter-spacing: 0.01em;
+}
+
 /* Circular logo wall */
 .logo-wall {
     display: grid;
