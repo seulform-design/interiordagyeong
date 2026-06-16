@@ -275,19 +275,19 @@
     position: relative;
     z-index: 1;
     display: block;
-    width: clamp(140px, 13vw, 180px);
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 12px;
     overflow: hidden;
     margin-bottom: var(--sp-4);
-    box-shadow: 0 16px 34px -18px rgba(11, 42, 71, 0.55);
+    box-shadow: 0 18px 36px -24px rgba(11, 42, 71, 0.45);
 }
 .value-photo::after {
     content: '';
     position: absolute;
     inset: 0;
-    border-radius: 50%;
-    box-shadow: inset 0 0 0 1px rgba(11, 42, 71, 0.12);
+    border-radius: 12px;
+    box-shadow: inset 0 0 0 1px rgba(11, 42, 71, 0.10);
     pointer-events: none;
 }
 .value-photo img {
