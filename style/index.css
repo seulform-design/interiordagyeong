@@ -1233,8 +1233,10 @@
     box-shadow: 0 16px 32px -18px rgba(6, 22, 40, 0.28);
 }
 .logo-badge img {
-    width: 66%;
-    height: 66%;
+    max-width: 78%;
+    max-height: 52%;
+    width: auto;
+    height: auto;
     object-fit: contain;
     filter: grayscale(1);
     opacity: 0.8;
