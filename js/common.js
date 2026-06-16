@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /* ---- Reveal on scroll ---- */
     const reveal = document.querySelectorAll(
-        '.about-head, .value, .cv-item, .cv-card, .cv-quote, .pp-text, .pp-visual, ' +
+        '.about-head, .value, .cv-item, .pp-text, .pp-visual, ' +
         '.hb-text, .hb-visual, .org-lead, .org-dept, ' +
         '.proc-item, .proc-slogan, .pf-card, .lic-card, .client-block, ' +
         '.philo-lead, .philo-body, .srv-row, .pj-card, ' +
