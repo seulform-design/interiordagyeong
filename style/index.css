@@ -1071,7 +1071,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: var(--sp-4);
     max-width: 880px;
-    margin: 0 auto var(--sp-7);
+    margin: 0 auto;
 }
 .lic-card {
     position: relative;
