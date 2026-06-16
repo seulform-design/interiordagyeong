@@ -127,6 +127,85 @@
     .ceo-body { padding-top: var(--sp-3); }
 }
 
+/* ===== Company Profile Download ===== */
+.profile-dl { background: var(--c-bg); }
+.profile-dl-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-5);
+    flex-wrap: wrap;
+    padding: var(--sp-6) var(--sp-7);
+    background: var(--c-navy);
+    color: var(--c-white);
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+.profile-dl-card::after {
+    content: '';
+    position: absolute;
+    top: -40%; right: -6%;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(179,139,109,0.20) 0%, rgba(179,139,109,0) 70%);
+    pointer-events: none;
+}
+.profile-dl-text { position: relative; z-index: 1; max-width: 60ch; }
+.profile-dl-text .eyebrow { color: var(--c-bronze-2); display: block; margin-bottom: var(--sp-2); }
+.profile-dl-text h2 {
+    font-size: clamp(24px, 2.6vw, 34px);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--c-white);
+    margin-bottom: var(--sp-3);
+}
+.profile-dl-text p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--c-stone);
+}
+.profile-dl-meta {
+    margin-top: var(--sp-2);
+    font-size: 12px !important;
+    letter-spacing: 0.04em;
+    color: var(--c-bronze-2) !important;
+    text-transform: uppercase;
+}
+.profile-dl-btn {
+    position: relative;
+    z-index: 1;
+    flex: none;
+    gap: 10px;
+}
+.dl-ico {
+    width: 15px; height: 15px;
+    position: relative;
+    flex: none;
+}
+.dl-ico::before {
+    content: '';
+    position: absolute;
+    left: 50%; top: 0;
+    transform: translateX(-50%);
+    width: 1.5px; height: 9px;
+    background: currentColor;
+}
+.dl-ico::after {
+    content: '';
+    position: absolute;
+    left: 50%; top: 4px;
+    width: 8px; height: 8px;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+@media (max-width: 768px) {
+    .profile-dl-card { padding: var(--sp-5); border-radius: 12px; }
+    .profile-dl-btn { width: 100%; }
+}
+
 /* ===== History ===== */
 .history { background: var(--c-ivory); }
 .hist-list {
