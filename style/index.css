@@ -688,6 +688,7 @@
 
 /* ===== CLIENT REVIEWS ===== */
 .reviews { background: var(--c-ivory); }
+.testi { background: var(--c-bg); }
 .rv-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

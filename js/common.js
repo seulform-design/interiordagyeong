@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
         '.hb-text, .hb-visual, .org-lead, .org-dept, ' +
         '.proc-item, .proc-slogan, .pf-card, .lic-card, .client-block, ' +
         '.philo-lead, .philo-body, .srv-row, .pj-card, ' +
-        '.stat, .info-dl, .srv-block, .plan-row, .hist-item, ' +
+        '.stat, .info-dl, .srv-block, .plan-row, .hist-item, .rv-card, ' +
         '.ct-info, .ct-form-box, .visit-info, .visit-map'
     );
     reveal.forEach(function (el) { el.classList.add('fade-in'); });
